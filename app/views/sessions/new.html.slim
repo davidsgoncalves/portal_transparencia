@@ -1,0 +1,8 @@
+.container
+  .col-lg-offset-3.col-lg-5
+    .alert.alert-success
+      = image_tag 'logo.png', class: 'img-responsive', style: 'margin-bottom: 20px;'
+      = simple_form_for :session, url: session_create_path, method: :post do |f|
+        = f.input :name, label: false, placeholder: 'Nome'
+        = f.input :password, label: false, placeholder: 'Senha'
+        = f.button :submit, "Fazer Login"
