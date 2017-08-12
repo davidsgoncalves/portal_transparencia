@@ -1,0 +1,7 @@
+.container
+  = table_for(@players, class: 'table table-striped') do |t|
+    - t.column :name
+    - t.column :actions do |player|
+      = link_to 'Editar', new_player_path, class: 'btn btn-info', style: 'margin-right: 5px;'
+      = link_to 'excluir', new_player_path, class: 'btn btn-danger'
+  = link_to 'Criar Jogador', new_player_path, class: 'btn btn-success'

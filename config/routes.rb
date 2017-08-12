@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get 'session_new', to: 'sessions#new'
   post 'session_create', to: 'sessions#login'
   get 'session_destroy', to: 'sessions#logout'
+
+  resources :players
 end

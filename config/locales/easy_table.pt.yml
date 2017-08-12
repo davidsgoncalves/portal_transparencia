@@ -1,0 +1,5 @@
+pt:
+  easy_table:
+    player: # this is matched based on controller_name.singularize
+      name: 'Nome'
+      actions: 'Ações'

@@ -13,6 +13,7 @@ nav.navbar.navbar-default
       ul.nav.navbar-nav
         li
           a href="#" Partidas
+        li = link_to 'Jogadores', players_path
       ul.nav.navbar-nav.navbar-right
         - if logged_in?
           p.navbar-text = "Logado como: #{current_user.name}"
