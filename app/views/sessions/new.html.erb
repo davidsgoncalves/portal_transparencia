@@ -1,0 +1,5 @@
+<%= simple_form_for :session, url: session_create_path, method: :post do |f| %>
+    <%= f.input :name %>
+    <%= f.input :password %>
+    <%= f.button :submit, "Fazer Login" %>
+<% end %>
