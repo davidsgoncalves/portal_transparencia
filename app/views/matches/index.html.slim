@@ -1,6 +1,7 @@
 .container
   = table_for(@matches, class: 'table table-striped') do |t|
-    - t.column :date
+    - t.column :date do |match|
+      = date_format(match.date)
     - if logged_in?
       - t.column :actions do |match|
         = link_to 'Ver', match_path(match.id), class: 'btn btn-xs btn-success', style: 'margin-right: 5px;'
