@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title PortalTransparencia
+    = csrf_meta_tags
+
+    = javascript_include_tag 'vendor'
+    = javascript_include_tag 'app'
+  body
+    = render "layouts/header"
+    .container
+      = flash_messages
+    = yield

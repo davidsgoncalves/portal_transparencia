@@ -2,6 +2,6 @@
   = table_for(@players, class: 'table table-striped') do |t|
     - t.column :name
     - t.column :actions do |player|
-      = link_to 'Editar', new_player_path, class: 'btn btn-info', style: 'margin-right: 5px;'
-      = link_to 'excluir', new_player_path, class: 'btn btn-danger'
+      = link_to 'Editar', edit_player_path(player.id), class: 'btn btn-xs btn-info', style: 'margin-right: 5px;'
+      = link_to 'Excluir', player_path(player.id), class: 'btn btn-danger btn-xs', :method => :delete, :data => {:confirm => "Você tem certeza? "}
   = link_to 'Criar Jogador', new_player_path, class: 'btn btn-success'
