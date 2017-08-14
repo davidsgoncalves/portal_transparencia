@@ -1,0 +1,14 @@
+.container
+  = table_for(@matches, class: 'table table-striped') do |t|
+    - t.column :date
+    - if logged_in?
+      - t.column :actions do |match|
+        = link_to 'Ver', match_path(match.id), class: 'btn btn-xs btn-success', style: 'margin-right: 5px;'
+        = link_to 'Editar', edit_match_path(match.id), class: 'btn btn-xs btn-info', style: 'margin-right: 5px;'
+        = link_to 'Excluir', match_path(match.id), class: 'btn btn-danger btn-xs', :method => :delete, :data => {:confirm => "Você tem certeza? "}
+  .row.pull-right
+    = will_paginate @matches
+  .row
+    .action-buttons
+      = link_to 'Criar Partida', new_match_path, class: 'btn btn-success' if logged_in?
+      = link_to 'Criar Todas Partidas de Mês', new_month_matches_path, class: 'btn btn-success' if logged_in?

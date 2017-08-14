@@ -36,7 +36,7 @@ class PlayersController < ApplicationController
 
   def destroy
     if Player.find(params[:id]).delete
-      flash[:info] = "Você deletado com sucesso"
+      flash[:info] = "Você excluíu com sucesso"
     end
 
     redirect_to players_path

@@ -1,0 +1,8 @@
+.container
+  .col-lg-offset-3.col-lg-5
+    .alert.alert-success
+      h3 style="margin-bottom: 25px;" Criar partida
+      = simple_form_for :match, url: create_month_matches_path, method: :post do |f|
+        = f.input :month_number, label: 'Número do mês', collection: 1..12, required: true
+        = f.input :next_year, label: 'Do próximo ano', as: :boolean
+        = f.button :submit, "Salvar"

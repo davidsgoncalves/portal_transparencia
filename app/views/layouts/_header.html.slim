@@ -11,8 +11,7 @@ nav.navbar.navbar-default
     /! Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li
-          a href="#" Partidas
+        li = link_to 'Partidas', matches_path
         li = link_to 'Jogadores', players_path
       ul.nav.navbar-nav.navbar-right
         - if logged_in?
