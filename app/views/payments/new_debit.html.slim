@@ -1,0 +1,9 @@
+.container
+  .col-lg-offset-3.col-lg-5
+    .alert.alert-success
+      h3 style="margin-bottom: 25px;" Adicionar Débito
+      = simple_form_for @payment, url: create_debit_payments_path, method: :post  do |f|
+        = f.input :value, label: 'Valor'
+        = f.input :description, label: 'Descrição'
+
+        = f.button :submit, "Salvar"

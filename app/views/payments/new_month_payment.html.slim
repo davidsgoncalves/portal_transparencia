@@ -1,0 +1,10 @@
+.container
+  .col-lg-offset-3.col-lg-5
+    .alert.alert-success
+      h3 style="margin-bottom: 25px;" Criar Pagamento de Mês
+      = simple_form_for :payments, url: create_month_payment_payments_path, method: :post do |f|
+        = f.input :player_id, label: 'Jogador', collection: Player.all
+        = f.input :month_number, label: 'Número do mês', collection: 1..12, required: true
+        = f.input :year
+        = f.input :value, label: 'Valor'
+        = f.button :submit, "Salvar"

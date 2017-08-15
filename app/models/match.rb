@@ -12,6 +12,14 @@ class Match < ActiveRecord::Base
 
   has_many :payments
 
+  def to_label
+    self.date.strftime("%d/%m/%Y")
+  end
+
+  def can_be_deleted?
+    !(payments.present?)
+  end
+
   def get_all_fridays(month, next_year)
     year = Date.today.year
 

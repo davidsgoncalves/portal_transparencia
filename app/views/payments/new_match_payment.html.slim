@@ -1,0 +1,9 @@
+.container
+  .col-lg-offset-3.col-lg-5
+    .alert.alert-success
+      h3 style="margin-bottom: 25px;" Criar Pagamento de Partida
+      = simple_form_for @payment, url: create_match_payment_payments_path, method: :post  do |f|
+        = f.input :player_id, label: 'Jogador', collection: Player.all
+        = f.input :match_id, label: 'Partida', collection: Match.all.order(date: :desc), label_method: :to_label
+        = f.input :value, label: 'Valor'
+        = f.button :submit, "Salvar"

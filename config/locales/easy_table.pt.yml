@@ -3,3 +3,11 @@ pt:
     player: # this is matched based on controller_name.singularize
       name: 'Nome'
       actions: 'Ações'
+    payment:
+      player_id: 'Jogador'
+      match_id: 'Partida'
+      value: 'Valor'
+      description: 'Descrição'
+    match:
+      date: 'Data'
+      actions: 'Ações'

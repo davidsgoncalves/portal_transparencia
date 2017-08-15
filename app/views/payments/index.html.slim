@@ -1,0 +1,9 @@
+.container
+  p = "dinheiro em caixa: R$ #{Payment::money_on_hand}"
+  = table_for(@payments, class: 'table table-striped') do |t|
+    - t.column :player_id, label: 'Jogador' do |payment|
+      = payment.player&.name
+    - t.column :match_id, label: 'Partida' do |payment|
+      = link_to payment.match.to_label, match_path(payment.match.id) if payment.match
+    - t.column :value, label: 'Valor'
+    - t.column :description, label: 'Descrição'
