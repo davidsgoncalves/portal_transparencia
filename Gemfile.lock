@@ -43,8 +43,6 @@ GEM
       rake (>= 10.4, < 13.0)
     arel (7.1.4)
     bindex (0.5.0)
-    bootstrap-will_paginate (1.0.0)
-      will_paginate
     builder (3.2.3)
     byebug (9.0.6)
     coffee-rails (4.2.2)
@@ -186,7 +184,6 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  bootstrap-will_paginate
   byebug
   coffee-rails (~> 4.2)
   easy_table
