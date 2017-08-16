@@ -11,3 +11,6 @@ pt:
     match:
       date: 'Data'
       actions: 'Ações'
+      player_id: 'Jogador'
+      value: 'Valor'
+      description: 'Descrição'
